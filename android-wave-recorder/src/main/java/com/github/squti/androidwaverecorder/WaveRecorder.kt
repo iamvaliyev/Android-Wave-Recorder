@@ -162,7 +162,7 @@ class WaveRecorder {
     @SuppressLint("MissingPermission")
     private fun initializeAudioRecorder() {
         audioRecorder = AudioRecord(
-            MediaRecorder.AudioSource.MIC,
+            waveConfig.audioSource,
             waveConfig.sampleRate,
             waveConfig.channels,
             waveConfig.audioEncoding,
